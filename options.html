@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<title>GitMark — Options</title>
@@ -16,28 +16,66 @@
 
 			<div class="field">
 				<label class="field-label">Repository</label>
-				<span class="field-hint">owner/repo where links will be saved</span>
-				<input class="field-input" type="text" id="repository" placeholder="ahmadawais/awesome-random-stuff" />
+				<span class="field-hint"
+					>owner/repo where links will be saved</span
+				>
+				<input
+					class="field-input"
+					type="text"
+					id="repository"
+					placeholder="ahmadawais/awesome-random-stuff"
+				/>
 			</div>
 
 			<div class="field">
 				<label class="field-label">File Path</label>
-				<span class="field-hint">Relative path to the file where links get saved</span>
-				<input class="field-input" type="text" id="path" placeholder="readme.md" />
+				<span class="field-hint"
+					>Relative path to the file where links get saved</span
+				>
+				<input
+					class="field-input"
+					type="text"
+					id="path"
+					placeholder="readme.md"
+				/>
 			</div>
 
 			<div class="field">
 				<label class="field-label">API Token</label>
-				<input class="field-input" type="password" id="token" placeholder="github_pat_..." />
+				<input
+					class="field-input"
+					type="password"
+					id="token"
+					placeholder="github_pat_..."
+				/>
 
 				<details class="token-guide">
-					<summary>Fine-grained token <span class="token-rec">recommended</span></summary>
+					<summary>
+						Fine-grained token
+						<span class="token-rec">recommended</span>
+					</summary>
 					<ol>
-						<li>Go to <a href="https://github.com/settings/personal-access-tokens" target="_blank">Settings &rarr; Developer Settings &rarr; Fine-grained tokens</a></li>
+						<li>
+							Go to
+							<a
+								href="https://github.com/settings/personal-access-tokens"
+								target="_blank"
+								>Settings &rarr; Developer Settings &rarr;
+								Fine-grained tokens</a
+							>
+						</li>
 						<li>Click <strong>Generate new token</strong></li>
 						<li>Name it <code>gitmark</code>, set expiration</li>
-						<li><strong>Repository access</strong> &rarr; Only select repositories &rarr; pick your bookmarks repo</li>
-						<li><strong>Permissions</strong> &rarr; Repository permissions &rarr; search <strong>Contents</strong> &rarr; set to <strong>Read and write</strong></li>
+						<li>
+							<strong>Repository access</strong> &rarr; Only
+							select repositories &rarr; pick your bookmarks repo
+						</li>
+						<li>
+							<strong>Permissions</strong> &rarr; Repository
+							permissions &rarr; search
+							<strong>Contents</strong> &rarr; set to
+							<strong>Read and write</strong>
+						</li>
 						<li>Generate and paste above</li>
 					</ol>
 				</details>
@@ -45,7 +83,15 @@
 				<details class="token-guide">
 					<summary>Classic token</summary>
 					<ol>
-						<li>Go to <a href="https://github.com/settings/tokens/new" target="_blank">Settings &rarr; Developer Settings &rarr; Tokens (classic)</a></li>
+						<li>
+							Go to
+							<a
+								href="https://github.com/settings/tokens/new"
+								target="_blank"
+								>Settings &rarr; Developer Settings &rarr;
+								Tokens (classic)</a
+							>
+						</li>
 						<li>Name it <code>gitmark</code>, set expiration</li>
 						<li>Check the <strong>repo</strong> scope</li>
 						<li>Generate and paste above</li>

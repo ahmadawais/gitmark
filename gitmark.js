@@ -14,7 +14,7 @@
 		'September',
 		'October',
 		'November',
-		'December'
+		'December',
 	];
 
 	// Common page title suffixes to strip.
@@ -29,7 +29,7 @@
 		/ [-–—|·] Twitter$/i,
 		/ [-–—|·] LinkedIn$/i,
 		/ [-–—|·] npm$/i,
-		/ [-–—|·] DEV Community$/i
+		/ [-–—|·] DEV Community$/i,
 	];
 
 	var POPUP_HTML =
@@ -94,7 +94,9 @@
 	}
 
 	function formatDate(d) {
-		return MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+		return (
+			MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear()
+		);
 	}
 
 	function todayISO() {
@@ -113,12 +115,15 @@
 	}
 
 	function friendlyError(status, message) {
-		if (status === 401) return 'Invalid token. Generate a new one in settings.';
+		if (status === 401)
+			return 'Invalid token. Generate a new one in settings.';
 		if (status === 403) return 'Access denied. Check token permissions.';
 		if (status === 404)
 			return 'Repo or file not found. Check your settings.';
-		if (status === 409) return 'Conflict — file was updated elsewhere. Try again.';
-		if (status === 422) return 'Validation failed. The file may be too large.';
+		if (status === 409)
+			return 'Conflict — file was updated elsewhere. Try again.';
+		if (status === 422)
+			return 'Validation failed. The file may be too large.';
 		return message || 'Something went wrong.';
 	}
 
@@ -130,7 +135,7 @@
 		if (content.indexOf('### ' + dateStr) !== -1) {
 			return content.replace(
 				'### ' + dateStr + '\n',
-				'### ' + dateStr + '\n' + linkLine
+				'### ' + dateStr + '\n' + linkLine,
 			);
 		}
 
@@ -171,9 +176,9 @@
 					'path',
 					'token',
 					'committer_name',
-					'committer_email'
+					'committer_email',
 				],
-				resolve
+				resolve,
 			);
 		});
 	}
@@ -293,7 +298,7 @@
 
 			if (!owner || !repo || !path || !token) {
 				showMessage(
-					'Missing settings. Right-click the extension icon and open Options.'
+					'Missing settings. Right-click the extension icon and open Options.',
 				);
 				btn.classList.remove('saving');
 				btn.textContent = 'Save';
@@ -303,7 +308,7 @@
 			var repoBase = API_BASE + '/' + owner + '/' + repo;
 			var headers = {
 				'Content-Type': 'application/json',
-				Authorization: 'Bearer ' + token
+				Authorization: 'Bearer ' + token,
 			};
 
 			var apiUrl = repoBase + '/contents/' + path;
@@ -324,7 +329,9 @@
 				return;
 			}
 
-			var currentContent = decodeBase64(fileData.content.replace(/\n/g, ''));
+			var currentContent = decodeBase64(
+				fileData.content.replace(/\n/g, ''),
+			);
 
 			// Duplicate check.
 			if (hasUrl(currentContent, url)) {
@@ -350,14 +357,14 @@
 				sha: fileData.sha,
 				committer: {
 					name: settings.committer_name || owner,
-					email: settings.committer_email || ''
-				}
+					email: settings.committer_email || '',
+				},
 			};
 
 			var putRes = await fetch(apiUrl, {
 				method: 'PUT',
 				headers: headers,
-				body: JSON.stringify(commit)
+				body: JSON.stringify(commit),
 			});
 			var putData = await putRes.json();
 
@@ -365,7 +372,7 @@
 				showMessage(
 					'Done \u2014 <a href="' +
 						putData.commit.html_url +
-						'" target="_blank">view commit</a>'
+						'" target="_blank">view commit</a>',
 				);
 				setTimeout(hidePopup, 5000);
 			} else {

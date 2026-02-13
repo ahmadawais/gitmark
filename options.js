@@ -9,9 +9,11 @@
 					document.getElementById('repository').value =
 						data.owner + '/' + data.repo;
 				}
-				if (data.path) document.getElementById('path').value = data.path;
-				if (data.token) document.getElementById('token').value = data.token;
-			}
+				if (data.path)
+					document.getElementById('path').value = data.path;
+				if (data.token)
+					document.getElementById('token').value = data.token;
+			},
 		);
 	}
 
@@ -32,21 +34,23 @@
 
 		// Validate token.
 		var userRes = await fetch('https://api.github.com/user', {
-			headers: headers
+			headers: headers,
 		});
-		if (!userRes.ok) return {ok: false, error: 'Invalid token.', user: null};
+		if (!userRes.ok)
+			return {ok: false, error: 'Invalid token.', user: null};
 		var user = await userRes.json();
 
 		// Validate repo access.
 		var repoRes = await fetch(
 			'https://api.github.com/repos/' + owner + '/' + repo,
-			{headers: headers}
+			{headers: headers},
 		);
 		if (!repoRes.ok)
 			return {
 				ok: false,
-				error: 'Repo "' + owner + '/' + repo + '" not found or no access.',
-				user: user
+				error:
+					'Repo "' + owner + '/' + repo + '" not found or no access.',
+				user: user,
 			};
 
 		// Validate file exists (case-insensitive).
@@ -60,7 +64,7 @@
 				repo +
 				'/contents' +
 				dirPath,
-			{headers: headers}
+			{headers: headers},
 		);
 
 		if (dirRes.ok) {
@@ -76,7 +80,7 @@
 							'File "' +
 							path +
 							'" not found in repo. Create it first.',
-						user: user
+						user: user,
 					};
 			}
 		}
@@ -127,7 +131,7 @@
 				token: tokenVal,
 				committer_name: user.name || user.login || owner,
 				committer_email:
-					user.email || owner + '@users.noreply.github.com'
+					user.email || owner + '@users.noreply.github.com',
 			};
 
 			chrome.storage.sync.set(settings, function () {
