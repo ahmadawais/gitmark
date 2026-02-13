@@ -28,12 +28,12 @@
 		}
 	],
 	"commands": {
-		"toggle-like": {
+		"_execute_action": {
 			"suggested_key": {
 				"default": "Ctrl+Shift+G",
 				"mac": "Command+Shift+G"
 			},
-			"description": "Open Gitmark popup"
+			"description": "Activate Gitmark"
 		}
 	},
 	"options_page": "options.html",
