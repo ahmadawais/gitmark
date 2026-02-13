@@ -1,0 +1,229 @@
+.gm {
+	all: initial !important;
+	display: none !important;
+}
+
+.gm.gm-open {
+	display: block !important;
+	position: fixed !important;
+	top: 16px !important;
+	right: 16px !important;
+	width: 360px !important;
+	padding: 20px !important;
+	background: #000 !important;
+	color: #fff !important;
+	border: 1px solid rgba(255, 255, 255, 0.08) !important;
+	border-radius: 14px !important;
+	box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.8) !important;
+	z-index: 2147483647 !important;
+	font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI',
+		system-ui, sans-serif !important;
+	font-size: 14px !important;
+	line-height: 1.5 !important;
+	letter-spacing: -0.01em !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	opacity: 0 !important;
+	transform: translateY(-8px) scale(0.98) !important;
+	transition: opacity 0.15s ease, transform 0.15s ease !important;
+}
+
+.gm.gm-open.gm-visible {
+	opacity: 1 !important;
+	transform: translateY(0) scale(1) !important;
+}
+
+.gm *,
+.gm *::before,
+.gm *::after {
+	all: unset !important;
+	box-sizing: border-box !important;
+	display: block !important;
+}
+
+.gm-header {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	margin-bottom: 16px !important;
+}
+
+.gm-brand {
+	display: inline !important;
+	font-size: 13px !important;
+	font-weight: 600 !important;
+	letter-spacing: -0.02em !important;
+	color: rgba(255, 255, 255, 0.4) !important;
+	font-family: inherit !important;
+}
+
+.gm-close {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 24px !important;
+	height: 24px !important;
+	background: none !important;
+	border: 1px solid rgba(255, 255, 255, 0.08) !important;
+	border-radius: 6px !important;
+	color: rgba(255, 255, 255, 0.4) !important;
+	font-size: 14px !important;
+	cursor: pointer !important;
+	transition: all 0.15s ease !important;
+	line-height: 1 !important;
+}
+
+.gm-close:hover {
+	color: #fff !important;
+	border-color: rgba(255, 255, 255, 0.2) !important;
+	background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.gm-field {
+	margin-bottom: 12px !important;
+}
+
+.gm-label {
+	font-size: 12px !important;
+	font-weight: 500 !important;
+	color: rgba(255, 255, 255, 0.45) !important;
+	margin-bottom: 6px !important;
+	letter-spacing: 0.01em !important;
+	font-family: inherit !important;
+}
+
+.gm-optional {
+	display: inline !important;
+	color: rgba(255, 255, 255, 0.2) !important;
+	font-weight: 400 !important;
+	font-size: 11px !important;
+	margin-left: 4px !important;
+}
+
+.gm-input {
+	width: 100% !important;
+	padding: 9px 12px !important;
+	background: rgba(255, 255, 255, 0.05) !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	border-radius: 8px !important;
+	color: #fff !important;
+	font-size: 13px !important;
+	font-family: inherit !important;
+	outline: none !important;
+	transition: border-color 0.15s ease !important;
+	-webkit-appearance: none !important;
+	appearance: none !important;
+}
+
+.gm-input:focus {
+	border-color: rgba(255, 255, 255, 0.25) !important;
+	background: rgba(255, 255, 255, 0.07) !important;
+}
+
+.gm-input::placeholder {
+	color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.gm-input::selection {
+	background: rgba(255, 255, 255, 0.2) !important;
+	color: #fff !important;
+}
+
+.gm-input[type='date'] {
+	color-scheme: dark !important;
+}
+
+.gm input[type='hidden'] {
+	display: none !important;
+}
+
+.gm-actions {
+	display: flex !important;
+	align-items: center !important;
+	gap: 8px !important;
+	margin-top: 16px !important;
+}
+
+.gm-btn {
+	display: inline-block !important;
+	padding: 8px 18px !important;
+	border-radius: 8px !important;
+	font-size: 13px !important;
+	font-weight: 500 !important;
+	font-family: inherit !important;
+	cursor: pointer !important;
+	border: none !important;
+	transition: all 0.15s ease !important;
+	letter-spacing: -0.01em !important;
+	line-height: 1.4 !important;
+	text-align: center !important;
+}
+
+.gm-btn-primary {
+	background: #fff !important;
+	color: #000 !important;
+}
+
+.gm-btn-primary:hover {
+	background: rgba(255, 255, 255, 0.88) !important;
+}
+
+.gm-btn-primary.saving {
+	opacity: 0.4 !important;
+	pointer-events: none !important;
+}
+
+.gm-btn-ghost {
+	background: transparent !important;
+	color: rgba(255, 255, 255, 0.5) !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.gm-btn-ghost:hover {
+	color: rgba(255, 255, 255, 0.8) !important;
+	border-color: rgba(255, 255, 255, 0.2) !important;
+	background: rgba(255, 255, 255, 0.04) !important;
+}
+
+.gm-hint {
+	display: inline !important;
+	margin-left: auto !important;
+	font-size: 11px !important;
+	color: rgba(255, 255, 255, 0.2) !important;
+	font-family: inherit !important;
+	letter-spacing: 0.02em !important;
+}
+
+.gm-status {
+	display: none !important;
+}
+
+.gm-status.gm-status-open {
+	display: block !important;
+	margin-top: 12px !important;
+	padding: 9px 12px !important;
+	background: rgba(255, 255, 255, 0.05) !important;
+	border-radius: 8px !important;
+	border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.gm-status p {
+	margin: 0 !important;
+	font-size: 13px !important;
+	color: rgba(255, 255, 255, 0.7) !important;
+	line-height: 1.4 !important;
+	font-family: inherit !important;
+}
+
+.gm-status a {
+	display: inline !important;
+	color: #fff !important;
+	text-decoration: underline !important;
+	text-underline-offset: 2px !important;
+	text-decoration-color: rgba(255, 255, 255, 0.3) !important;
+	cursor: pointer !important;
+}
+
+.gm-status a:hover {
+	text-decoration-color: #fff !important;
+}

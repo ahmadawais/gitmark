@@ -1,0 +1,41 @@
+{
+	"name": "GitMark",
+	"short_name": "GitMark",
+	"description": "Bookmark links in a git repo.",
+	"version": "4.0.0",
+	"manifest_version": 3,
+	"icons": {
+		"16": "assets/icons/icon-16.png",
+		"48": "assets/icons/icon-48.png",
+		"64": "assets/icons/icon-64.png",
+		"128": "assets/icons/icon-128.png"
+	},
+	"permissions": ["storage", "activeTab"],
+	"host_permissions": ["https://api.github.com/*"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_title": "GitMark",
+		"default_icon": "assets/icons/icon-16.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"css": ["assets/css/popup.css"],
+			"js": ["gitmark.js"],
+			"run_at": "document_idle"
+		}
+	],
+	"commands": {
+		"toggle-like": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+G",
+				"mac": "Command+Shift+G"
+			},
+			"description": "Open GitMark popup"
+		}
+	},
+	"options_page": "options.html",
+	"homepage_url": "https://github.com/ahmadawais/like-on-github"
+}
