@@ -35,7 +35,7 @@
 	var POPUP_HTML =
 		'<div class="gm">' +
 		'<div class="gm-header">' +
-		'<span class="gm-brand">GitMark</span>' +
+		'<span class="gm-brand">Gitmark</span>' +
 		'<button class="gm-close" id="gm_close">&times;</button>' +
 		'</div>' +
 		'<div class="gm-field">' +

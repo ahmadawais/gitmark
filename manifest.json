@@ -1,6 +1,6 @@
 {
-	"name": "GitMark",
-	"short_name": "GitMark",
+	"name": "Gitmark",
+	"short_name": "Gitmark",
 	"description": "Bookmark links in a git repo.",
 	"version": "4.0.0",
 	"manifest_version": 3,
@@ -16,7 +16,7 @@
 		"service_worker": "background.js"
 	},
 	"action": {
-		"default_title": "GitMark",
+		"default_title": "Gitmark",
 		"default_icon": "assets/icons/icon-16.png"
 	},
 	"content_scripts": [
@@ -33,7 +33,7 @@
 				"default": "Ctrl+Shift+G",
 				"mac": "Command+Shift+G"
 			},
-			"description": "Open GitMark popup"
+			"description": "Open Gitmark popup"
 		}
 	},
 	"options_page": "options.html",

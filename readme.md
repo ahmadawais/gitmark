@@ -1,4 +1,6 @@
-# GitMark
+<img src="https://raw.githubusercontent.com/ahmadawais/gitmark/main/.github/cover.png" alt="Gitmark" />
+
+# Gitmark
 
 > Bookmark links in a git repo. I maintain a repo like this called [awesome-random-stuff](https://github.com/ahmadawais/awesome-random-stuff).
 
@@ -18,6 +20,8 @@ A Chrome extension that bookmarks any webpage to a GitHub repo. Press a shortcut
 3. Generate a token (see below)
 4. Right-click the extension icon > **Options** and fill in your details
 
+<img src="https://raw.githubusercontent.com/ahmadawais/gitmark/main/.github/options.png" alt="Gitmark Options" />
+
 ### Token setup
 
 **Fine-grained token (recommended)** — scoped to one repo, minimal permissions:
@@ -27,14 +31,14 @@ A Chrome extension that bookmarks any webpage to a GitHub repo. Press a shortcut
 3. Name it `gitmark`, set expiration
 4. **Repository access** → Only select repositories → pick your bookmarks repo
 5. **Permissions** → Repository permissions → search **Contents** → set to **Read and write**
-6. Generate and paste into GitMark options
+6. Generate and paste into Gitmark options
 
 **Classic token** — broader access, simpler setup:
 
 1. Go to [Settings > Developer Settings > Personal Access Tokens > Tokens (classic)](https://github.com/settings/tokens/new)
 2. Name it `gitmark`, set expiration
 3. Check the **repo** scope
-4. Generate and paste into GitMark options
+4. Generate and paste into Gitmark options
 
 ## Usage
 
