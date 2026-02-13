@@ -1,6 +1,6 @@
 # GitMark
 
-> Bookmark links in a git repo.
+> Bookmark links in a git repo. I maintain a repo like this called [awesome-random-stuff](https://github.com/ahmadawais/awesome-random-stuff).
 
 A Chrome extension that bookmarks any webpage to a GitHub repo. Press a shortcut, edit the title and description, and it gets committed as markdown organized by date.
 
