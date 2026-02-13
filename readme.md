@@ -64,4 +64,4 @@ Links are saved as markdown, organized by date (newest first):
 
 ## License
 
-MIT &copy; [Ahmad Awais](https://github.com/ahmadawais)
+Apache-2.0 &copy; [Ahmad Awais](https://github.com/ahmadawais)
